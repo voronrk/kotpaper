@@ -45,6 +45,7 @@ body {
     margin:5px;
     display:flex;
     flex-direction:column;
+    
 }
 
 .label {
@@ -53,12 +54,23 @@ body {
     color:var(--main-color);
 }
 
+.dropdown-wrapper {
+    position:relative;
+}
+
 .dropdown {
     display:none;
     background-color:#ddd;
+    position:absolute;
+    top:0px;
 }
 
 #paper:focus + .dropdown {
+    /* display:block;
+    position:absolute; */
+}
+
+.dropdown:hover {
     display:block;
 }
 

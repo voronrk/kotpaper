@@ -1,14 +1,26 @@
 document.addEventListener('DOMContentLoaded', ()=> {
     'use strict';
     
-    const dropdown=document.getElementById('dropdown');
-    const dropdownItems=dropdown.childNodes;
-    console.log(dropdown);
-    console.log(dropdownItems);
+    const dropdown=document.getElementById('dropdown'),
+          paper=document.getElementById('paper');
 
-    dropdown.addEventListener('click', () => {
-        const dropdownItems=dropdown.childNodes;
-        console.log (dropdownItems);
+    paper.addEventListener('focus', () => {
+        dropdown.style.display='block';
+    });
+
+    paper.addEventListener('input', () => {
+        dropdown.style.display='none';
+    });
+
+    dropdown.addEventListener('blur', () => {
+        dropdown.style.display='none';
+    });
+
+    dropdown.addEventListener('click', (event) => {
+        const target=event.target;
+        const targetItem=target.textContent;
+        paper.value=targetItem;
+        dropdown.style.display='none';
     });
 
 });
