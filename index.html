@@ -6,16 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Заявка на газету</title>
     <link rel="stylesheet" href="./css/paper.css">
-    
+        
 </head>
 
 <body>
     <form class="form">
-        <input type="text" name="num" id="num" placeholder="Заказ">
-        <input type="text" name="paper" id="paper" placeholder="Бумага">
-        <input type="text" name="plan" id="plan" placeholder="План">
-        <input type="text" name="fact" id="fact" placeholder="Факт">
-        <input type="text" name="oper" id="oper" placeholder="Оператор">
-        <button type="submit">ok</button>
+        <div class="form-part">
+            <label class="label">Номер заказа</label>
+            <input type="text" name="num" id="num" placeholder="Заказ">
+        </div>
+        <div class="form-part">
+            <label class="label">Бумага</label>
+            <input type="text" name="paper" id="paper" placeholder="Бумага">
+            <ul class="dropdown" id="dropdown">
+                <li class="dropdown-item">1</li>
+                <li class="dropdown-item">2</li>
+                <li class="dropdown-item">3</li>
+                <li class="dropdown-item">4</li>
+                <li class="dropdown-item">5</li>
+            </ul>
+        </div>
+        <div class="form-part">
+            <label class="label">План</label>
+            <input type="text" name="plan" id="plan" placeholder="План">
+        </div>
+        <div class="form-part">
+            <label class="label">Факт</label>
+            <input type="text" name="fact" id="fact" placeholder="Факт">
+        </div>
+        <div class="form-part">
+            <label class="label">Оператор</label>
+            <input type="text" name="oper" id="oper" placeholder="Оператор">
+        </div>
+            <button type="submit">ok</button>
     </form>
+    <script src="./js/script.js"></script>
 </body>
