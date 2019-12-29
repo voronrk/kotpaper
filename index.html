@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Заявка на газету</title>
+    <title>Учет бумаги</title>
     <link rel="stylesheet" href="./css/paper.css">
         
 </head>
 
-<body>
-    <form class="form">
+<body class="container">
+    <div class="form">
         <div class="form-part">
             <label class="label">Номер заказа</label>
             <input type="text" name="num" id="num" placeholder="Заказ">
@@ -20,11 +20,11 @@
             <input type="text" name="paper" id="paper" placeholder="Бумага">
             <div class="dropdown-wrapper">
             <ul class="dropdown" id="dropdown">
-                <li class="dropdown-item">1</li>
-                <li class="dropdown-item">2</li>
-                <li class="dropdown-item">3</li>
-                <li class="dropdown-item">4</li>
-                <li class="dropdown-item">5</li>
+                <!-- <li class="dropdown-item" id="d1">1</li>
+                <li class="dropdown-item" id="d2">2</li>
+                <li class="dropdown-item" id="d3">3</li>
+                <li class="dropdown-item" id="d4">4</li>
+                <li class="dropdown-item" id="d5">5</li> -->
             </ul>
             </div>
         </div>
@@ -40,7 +40,7 @@
             <label class="label">Оператор</label>
             <input type="text" name="oper" id="oper" placeholder="Оператор">
         </div>
-            <button type="submit">ok</button>
-    </form>
+            <button type="submit" id="submit">ok</button>
+    </div>
     <script src="./js/script.js"></script>
 </body>

@@ -63,6 +63,7 @@ body {
     background-color:#ddd;
     position:absolute;
     top:0px;
+    font-size:12px;
 }
 
 #paper:focus + .dropdown {
@@ -77,6 +78,7 @@ body {
 .dropdown-item {
     list-style-type:none;
     padding:0 5px;
+    cursor:pointer;
 }
 
 .dropdown-item:hover {
