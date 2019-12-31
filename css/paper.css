@@ -35,7 +35,7 @@ body {
     flex-direction:row;
     justify-content:center;
     background-color: #fff;
-    max-width:800px;
+    max-width:1200px;
     padding:20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     border-radius:5px;
@@ -86,6 +86,17 @@ body {
     color:white;
 }
 
+.text-input {
+    height:25px;
+    border: solid #ababab 1px;
+    padding:3px;
+    font-size:12px;
+}
+
+.text-input--wide {
+    width:240px;
+}
+
 /*
 .radio-wrapper {
     display:flex;
@@ -93,12 +104,7 @@ body {
     justify-content:space-around;
 }
 
-.text-input {
-    height:25px;
-    border: solid #ababab 1px;
-    padding:3px;
-    font-size:12px;
-}
+
 
 .text-big {
     height:50px;

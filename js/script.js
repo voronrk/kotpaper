@@ -54,16 +54,22 @@ document.addEventListener('DOMContentLoaded', ()=> {
         console.log(currentString);
         const request = new XMLHttpRequest();
         const url = "../savePaper.php";
-        const params = "paper=" + currentString;
+        const params = 'paper=' + currentString;
         request.open("POST", url, true);
         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
            
         request.addEventListener("readystatechange", () => {
             if(request.readyState === 4 && request.status === 200) {       
                 let savingResult=(request.responseText);
+		console.log(savingResult);
             }
           });
           request.send(params);
+          num.value="";
+          paper.value="";
+          plan.value="";
+          fact.value="";
+          oper.value="";
     });
 
     

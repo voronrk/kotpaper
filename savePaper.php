@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include "link.php"; 
 
 $currentString=explode(';',$_POST['paper']);
@@ -15,6 +16,7 @@ $sql = mysqli_query($_SESSION['link'], "INSERT INTO `transfer`
     '{$currentString[3]}',
     '{$currentString[0]}',
     '{$currentString[5]}')");
-?>
 echo ($sql);
+?>
+
 
