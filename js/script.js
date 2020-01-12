@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
           fact=document.getElementById('fact');
           oper=document.getElementById('oper');
           submit=document.getElementById('submit');
+          container=document.getElementById('container');
 
     const papersList = () => {
           const request = new XMLHttpRequest();
@@ -20,7 +21,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
                   let papersList=(request.responseText).split(';');
 
                   papersList.forEach( (paper, i) =>{
-                      dropdown.innerHTML +='<li class="dropdown-item">'+paper+'</li>';
+                      dropdown.innerHTML +='<li class="dropdown-item" id="paper-item">'+paper+'</li>';
                   });
               }
           });
@@ -29,12 +30,18 @@ document.addEventListener('DOMContentLoaded', ()=> {
     
     papersList();
 
+    container.addEventListener('click', (event) => {
+        const target=event.target;
+        if (target.id!='paper') dropdown.style.display='none';
+
+    });
+
     paper.addEventListener('focus', () => {
         dropdown.style.display='block';
     });
 
     paper.addEventListener('input', () => {
-        dropdown.style.display='none';
+        // dropdown.style.display='none';
     });
 
     dropdown.addEventListener('click', (event) => {
