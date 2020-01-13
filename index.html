@@ -15,7 +15,11 @@
         
     </nav>
 
-    <div class="form">
+    <div class="form" id="form">
+
+    <div class="wrapper">
+    <h1 class="h1">Списание бумаги</h1>
+
         <div class="form-part">
             <label class="label">Номер заказа</label>
             <input type="text" class="text-input" name="num" id="num" placeholder="Заказ">
@@ -37,10 +41,93 @@
             <input type="text" class="text-input" name="fact" id="fact" placeholder="Факт">
         </div>
         <div class="form-part">
-            <label class="label">Оператор</label>
-            <input type="text" class="text-input" name="oper" id="oper" placeholder="Оператор">
+            <label class="label">Исполнитель</label>
+            <input type="text" class="text-input" name="oper" id="oper" placeholder="Исполнитель">
         </div>
-            <button type="submit" id="submit">ok</button>
+        <div class="form-part">
+            <button type="submit" id="submit" class="submit">ok</button>
+        </div>
     </div>
+
+    <div class="wrapper">
+        <h1 class="h1">Приход бумаги</h1>
+    
+            <div class="form-part">
+                <label class="label">Номер заказа</label>
+                <input type="text" class="text-input" name="num-in" id="num-in" placeholder="Заказ">
+            </div>
+            <div class="form-part">
+                <label class="label">Бумага</label>
+                <input type="text" class="text-input text-input--wide" name="paper-in" id="paper-in" placeholder="Бумага">
+                <div class="dropdown-wrapper">
+                <ul class="dropdown text-input--wide" id="dropdown-in">
+                </ul>
+                </div>
+            </div>
+            <div class="form-part">
+                <label class="label">Количество</label>
+                <input type="text" class="text-input" name="count-in" id="count-in" placeholder="Количество">
+            </div>
+            <div class="form-part">
+                <label class="label">Оприходовал</label>
+                <input type="text" class="text-input" name="oper-in" id="oper-in" placeholder="Оприходовал">
+            </div>
+            <div class="form-part">
+                <button type="submit" id="submit-in" class="submit">ok</button>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <h1 class="h1">Отчеты</h1>
+            <div class="form-part">
+                <label class="label">Начало периода</label>
+                <input type="date" class="text-input" name="date-begin" id="date-from-1">
+            </div>
+            <div class="form-part">
+                <label class="label">Конец периода</label>
+                <input type="date" class="text-input" name="date-end" id="date-to-1">
+            </div>
+            <div class="form-part">
+                <button type="submit" id="submit-move" class="submit">Движение за период</button>
+            </div>
+            <div class="form-part">
+                <button type="submit" id="submit-report" class="submit">Сводный отчет за период</button>
+            </div>
+            <div class="form-part">
+                <button type="submit" id="submit-balance" class="submit">Остатки</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="form report" id="form-report">
+    <div class="wrapper wrapper--no-border">
+        <h1 class="h1">Отчет</h1>
+    
+            <div class="form-part">
+                <label class="label">Начало периода</label>
+                <input type="date" class="text-input" name="date-begin" id="date-from-2">
+            </div>
+            <div class="form-part">
+                <label class="label">Конец периода</label>
+                <input type="date" class="text-input" name="date-end" id="date-to-2">
+            </div>
+            <div class="form-part">
+                <button type="submit" id="submit-period" class="submit">Ok</button>
+            </div>
+    </div>
+            <table class="table" id="report-table">
+                <tr class="table-row">
+                    <th class="table-cell table-cell--head">Бумага</th>
+                    <th class="table-cell table-cell--head">Приход</th>
+                    <th class="table-cell table-cell--head">Расход</th>
+                    <th class="table-cell table-cell--head">Заказ</th>
+                    <th class="table-cell table-cell--head">Дата</th>
+                </tr>
+            </table>
+    </div>
+    </div>
+
+
+
     <script src="./js/script.js"></script>
 </body>

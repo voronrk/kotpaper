@@ -4,6 +4,8 @@ include "link.php";
 
 $currentString=explode(';',$_POST['paper']);
 
+// echo ($currentString[1]);
+
 $sql = mysqli_query($_SESSION['link'], "INSERT INTO `transfer` 
     (`paper_name`, 
     `quantity_plan`, 
